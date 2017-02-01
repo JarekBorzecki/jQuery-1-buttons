@@ -14,9 +14,11 @@ $(function() {
 $(function() {
 	var paragraphs = $('p');
 	paragraphs.each(function(index, element) {
-		var button = '<button class="btn" data-tmp="' + index + '">Click me</button>'
+		var button = $('<button class="btn" data-tmp="' + index + '">Click me</button>').css('margin-left', '10px');
 		$(element).append(button);
-		console.log(button);
+		if(index % 2 != 0) {
+			$(button).css('margin-left', '43px');
+		}
 	});
 });
 
